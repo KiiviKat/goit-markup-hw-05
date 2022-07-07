@@ -12,6 +12,7 @@
     --footer-background-color: #2F303A;
     --footer-socials-background-color: rgba(255, 255, 255, 0.1);
     --section-do-subtitle-background-color: rgba(47, 48, 58, 0.8);
+    --backdrop-color: rgba(0, 0, 0, 0.2);
 
     --primary-font-family: 'Roboto', sans-serif;
     --logo-font-family: 'Raleway', sans-serif;
@@ -584,6 +585,55 @@ ul {
 .cta-link:hover,
 .cta-link:focus {
     background-color: var(--accent-color);
+}
+
+/* Модальное окно */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--backdrop-color);
+}
+
+.backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 528px;
+    min-height: 581px;
+    border-radius: 4px;
+
+    background-color: var(--primary-background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 8px;
+    margin-left: 490px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    background-color: var(--primary-background-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 

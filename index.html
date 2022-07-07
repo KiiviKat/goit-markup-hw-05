@@ -41,7 +41,7 @@
         <section class="hero section">
             <div class="container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button class="btn order-btn" type="button">Заказать услугу</button>
+                <button class="btn order-btn" type="button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
     <section class="section-qualities section">
@@ -361,5 +361,16 @@
         </div>
     </footer>
 
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="modal-close-btn" type="button" data-modal-close>
+                <svg class="modal-close-icon" width="11px" height="11px">
+                    <use href="./images/sprite.svg#close-icon"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
 </body>
 </html>
