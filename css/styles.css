@@ -13,6 +13,7 @@
     --footer-socials-background-color: rgba(255, 255, 255, 0.1);
     --section-do-subtitle-background-color: rgba(47, 48, 58, 0.8);
     --backdrop-color: rgba(0, 0, 0, 0.2);
+    --overlay-portfolio-background-color: rgba(33, 150, 243, 0.9);
 
     --primary-font-family: 'Roboto', sans-serif;
     --logo-font-family: 'Raleway', sans-serif;
@@ -515,6 +516,39 @@ ul {
 .portfolio-link:hover,
 .portfolio-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--overlay-portfolio-background-color);
+
+    transform: translateY(101%);
+    transition: transform var(--transition-time) var(--transition-cubic);
+}
+
+.portfolio-overlay .text {
+    width: 322px;
+    height: 168px;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--white-text-color);
+}
+
+.portfolio-link:hover .portfolio-overlay,
+.portfolio-link:focus .portfolio-overlay {
+    transform: translateY(0);
 }
 
 /* Footer */
